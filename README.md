@@ -16,6 +16,9 @@ Make sure you have sufficient space
 Convert the geopackage (.gpkg) file to ArcGIS readable shapefile (efficient) compared to reading from ArcGIS
 ```ogr2ogr -f "ESRI Shapefile" ./arc_3776 3776/*.gpkg```
 
+[Script to do step 1 and 2 above](https://github.com/UConnARIAL/h3_hexagonal_iwp_sum/blob/main/get_gpkg_to_shp.sh)
+
+
 **Step 3**
 Run the [ArcPy Script](https://github.com/UConnARIAL/h3_hexagonal_iwp_sum/blob/main/h3_hexagonal_sum.py) for each (ex. 3776) batch of files
 
