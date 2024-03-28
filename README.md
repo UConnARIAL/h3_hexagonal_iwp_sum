@@ -17,7 +17,7 @@ Convert the geopackage (.gpkg) file to ArcGIS readable shapefile (efficient) com
 ```ogr2ogr -f "ESRI Shapefile" ./arc_3776 3776/*.gpkg```
 
 **Step 3**
-Run the [ArcPy Script](https://github.com/amalshehan/geo_spatial_py/blob/main/h3_hexagonal_iwp_sum/h3_hex_ag_arcPy.py) for each (ex. 3776) batch of files
+Run the [ArcPy Script](https://github.com/UConnARIAL/h3_hexagonal_iwp_sum/blob/main/h3_hexagonal_sum.py) for each (ex. 3776) batch of files
 
 **Step 4**
 Combine the summary table (csv files for each batch) via a database join on the h3 Hex grid ID.
