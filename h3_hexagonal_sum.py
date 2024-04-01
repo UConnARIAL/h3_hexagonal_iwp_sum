@@ -1,7 +1,8 @@
 # ArcPy Script to convert iwp shp files to sumerised table for aggregated counts 
 # INPUT : iwp shape files duplicates marked <staging_du=1>, h3_tessellation_layer
 # OUTPUT : Summery table with count for each Hexagonal cell in the h3_tessellation_layer
-#
+# TODO : All summery tables needs to be collected and aggregated (group_by) to get final counts
+# TODO : Add the area also be aggregated if required at the same time
 # Code is written to accumilate the counts for each run 
 # i.e. if you do not give a new name for Summery table it will start updating the existing table
 # When executing same shp file should not be processed twice
