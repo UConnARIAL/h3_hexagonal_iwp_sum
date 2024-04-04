@@ -197,7 +197,7 @@ if __name__ == "__main__":
                                 with arcpy.da.InsertCursor(sum_table, ["GRID_ID", "Sum_Cnt"]) as insert_cursor:
                                     insert_cursor.insertRow((grid_id, sum_cnt))              
                 print("Time to Complete cell aggregation = ",time.time() - st_tme)
-                print(f"Table Update Completed for {filename}, shp file {file_cnt} of {total_file_cnt}")
+                #print(f"Table Update Completed for {filename}, shp file {file_cnt} of {total_file_cnt}")
             except arcpy.ExecuteError:
                 print(arcpy.GetMessages())
         elif (selected_h3s==1):
@@ -217,7 +217,9 @@ if __name__ == "__main__":
                     if not row_found: # if not create new entry and add the row
                         with arcpy.da.InsertCursor(sum_table, ["GRID_ID", "Sum_Cnt"]) as insert_cursor:
                             insert_cursor.insertRow((grid_id, sum_cnt))
-    #print(f"Table Update Completed for {filename,file_cnt,total_files})
+        #print(f"Table Update Completed for {filename,file_cnt,total_files})
+        file_cnt+=1
+        print(f"Table Update Completed for {filename}, shp file {file_cnt} of {total_file_cnt}")
     # Clean up temporary layers
     if arcpy.Exists(temp_sum):
         arcpy.Delete_management(temp_sum)
