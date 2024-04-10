@@ -21,6 +21,7 @@ Convert the geopackage (.gpkg) file to ArcGIS readable shapefile (efficient) com
 
 **Step 3**
 Run the [ArcPy Script](https://github.com/UConnARIAL/h3_hexagonal_iwp_sum/blob/main/h3_hexagonal_sum.py) for each (ex. 3776) batch of files
+This script has to be executed on ArcGIS pro inside the app. When executed on commandline some files get locked and exection fails sometimes giving inacurate results.
 
 **Step 4**
 Combine the summary table (csv files for each batch) via a database join on the h3 Hex grid ID.
